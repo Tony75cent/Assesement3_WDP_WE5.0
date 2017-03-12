@@ -11,7 +11,7 @@ require 'functions.php';/**This file contains functions/methods either of which 
  *                      of the evalusation ie TRUE/FALSE
                               **/
 
-$myusername = $_POST['username'];/** According to the php manual  php.net This vasriable is
+$myusername = $_POST['inputEmail'];/** According to the php manual  php.net This variable is
  *                                   'An associative array of variables passed to
  *                                   the current script via the HTTP POST method 
  *                                   when using application/x-www-form-urlencoded or
@@ -26,7 +26,7 @@ $myusername = $_POST['username'];/** According to the php manual  php.net This v
  *                                   the $_POST['username'] The  local variable $myusername  is then 
  *                                   compared with the username values in usernamesAndpasswords.php
  *                                   **/
-$password = $_POST['password'];     /** A local variable $password  is also created for  the $_POST_['password']
+$password = $_POST['inputPassword'];     /** A local variable $password  is also created for  the $_POST_['password']
  *                                   which is  then compared to hardcoded 
  *                                  password values in usernamesAndpasswords.php 
  *                                  

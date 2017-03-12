@@ -5,12 +5,97 @@
  */
 
 $(function () {
-    
-        $("#inputEmail").on("click", animate);
+    $(document).on("onload",trasnsitionEffect);
+    $("#Btnsubmit").on("click", login);
+    $("#home").on("click",goToHomePage);
+    function login() {
+        alert("In login()");
+        /**  createLocalStorage();  **/
+        /** localStorage.setItem("email", "anthony.quinn@webelevate.ie"); **/
+        /**  localStorage.setItem("password", "anthonyquinn"); **/
+        /** Retrieve the user input  email and password from the form input fields in the index.html file
+         * and assign each one a reference,$email and  $password respectively **/
+        var $inputEmail = $("#inputEmail").html();
+        console.log($inputEmail);
+        $("")
+        var $inputPassword = $("#inputPassword").html();
+        var $storedusername = "anthonyquinn@webelevate.ie";
+        var $storedpassword = "letmein";
+        /** $storedemail = localStorage.getItem("email"); 
+         $("#loginerror").text(localStorage.getItem("email"));
+         $storedpassword = localStorage.getItem("password");
+         
+         **/
+        if ($inputEmail == $storedusername)  {
+            alert("B_testing@16:16");
 
-function animate(element) {
-    transition.begin(element, [
-        ["transform", "translateX(0)", "translateX(200px)", "1s", "ease-in-out"],
-        ["background-color", "#ffffff", "#ADB5C7", "500ms", "linear"]
-    ]);
-}});
+
+            window.location = "/Assesement3_WDP_WE5/menu.html";
+
+        } else {
+            alert("C_testing@16:18");
+
+            window.location = "/Assesement3_WDP_WE5/error.html";
+                        alert("D_testing@16:18");
+
+
+
+
+
+        }
+
+
+
+
+
+
+    }
+    function createLocalStorage() {
+        // Check browser support
+        if (typeof (Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("email", "anthony.quinn@webelevate.ie");
+            localStorage.setItem("password", "anthonyquinn");
+            // Retrieve
+        } else {
+            $('#loginerror').text("Sorry, your browser does not support Web Storage...");
+        }
+
+    }
+    ;
+    function login2() {
+        var username = $("#inputEmail").text();
+        var password = $("inputPassword").text();
+        /**    var username = document.getElementById(this.id + "-username").value; **/
+        /** var password = document.getElementById(this.id + "-password").value; **/
+        this.http.open("get", this.action, false, username, password);
+        this.http.send("");
+        if (http.status == 200) {
+            document.location = "menu.html";
+        } else {
+            alert("Incorrect username and/or password.");
+        }
+        return false;
+
+
+
+
+    }
+    function goToHomePage(){
+       window.location.href = "/Assesement3_WDP_WE5/Jumbotron.html";
+        
+    }
+function trasnsitionEffect(){
+    $( "#footer" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    height: "toggle"
+  }, 5000, function() {
+    // Animation complete.
+  });
+    
+    
+}
+
+
+});

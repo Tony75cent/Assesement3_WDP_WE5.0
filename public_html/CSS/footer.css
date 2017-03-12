@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-Mar-2017, 20:59:36
+    Author     : AnthonyQuinn
+*/
+
+.footer{
+    
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    
+    /** This code is located at: https://www.w3schools.com/css/tryit.asp?filename=trycss_align_container **/
+    /**This code is used center the footer and button group on each page **/
+}

@@ -7,7 +7,8 @@
 $(function () {
     $(document).on("onload",trasnsitionEffect);
     $("#Btnsubmit").on("click", login);
-    $("#home").on("click",goToHomePage);
+    $("#home_Carousel").on("click",goToJumbotronPage);
+    $("#carousel_Jumbotron").on("click",goToCarouselPage);
     function login() {
         alert("In login()");
         /**  createLocalStorage();  **/
@@ -81,8 +82,12 @@ $(function () {
 
 
     }
-    function goToHomePage(){
+    function goToJumbotronPage(){
        window.location.href = "/Assesement3_WDP_WE5/Jumbotron.html";
+        
+    }
+    function goToCarouselPage(){
+       window.location.href = "/Assesement3_WDP_WE5/carousel.html";
         
     }
 function trasnsitionEffect(){

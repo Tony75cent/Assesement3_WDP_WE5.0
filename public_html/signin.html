@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
-        <link href="signin.css" rel="stylesheet" type="text/css"/>
+
         <title>Signin Template for Bootstrap</title>
 
         <!-- Bootstrap core CSS -->
@@ -23,34 +23,38 @@
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-        <script src="js/login.js" type="text/javascript"></script><!-- I added this line  Anthony Quinn --> 
-
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link href="bootstrap-3.3.7/bootstrap-3.3.7/docs/examples/signin/signin.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/functions.js" type="text/javascript"></script>
+        <link href="CSS/footer.css" rel="stylesheet" type="text/css"/>
+
     </head>
 
     <body>
 
         <div class="container">
-            <div id="loginerror" style="display: none; color: red; font-weight: bold;">ERROR username and/or password unknown </div><!--I added this line  Anthony Quinn-->
+            <div id="msg">&nbsp</div>
+            <button id="returnToLandingPage" type="button" class="btn btn-info btn-default"><span class="glyphicon glyphicon-log-out"></span>Return to landing page</button>
 
-            <form class="form-signin" onsubmit="return login();">
+            <form class="form-signin">
+
                 <h2 class="form-signin-heading">Please sign in</h2>
                 <label for="inputEmail" class="sr-only">Email address</label>
-                <!--input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus -->
-                <input type="email" id="inputEmail" class="form-control" name="inputEmail" required autofocus>
-
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
-                <!--input type="password" id="inputPassword" class="form-control" placeholder="Password" required-->
-                <input type="password" id="inputPassword" class="form-control" name="inputPassword" required>
-
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
+
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
